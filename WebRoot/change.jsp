@@ -1,0 +1,216 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <base href="<%=basePath%>">
+    
+    
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  <meta charset="utf-8">
+    <title>Personal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta property="qc:admins" content="77103107776157736375" />
+    <meta property="wb:webmaster" content="c4f857219bfae3cb" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+
+
+
+    <link rel="stylesheet" href="base.css" type="text/css" />
+    <link rel="stylesheet" href="common-less(1).css" type="text/css" />
+    <link rel="stylesheet" href="moco.min.css" type="text/css" />
+    <link rel="stylesheet" href="common-less.css" type="text/css" />
+    <link rel="stylesheet" href="profile-less.css" type="text/css" />
+
+
+  </head>
+  
+  <body >
+
+<div id="header">
+    <div class="page-container" id="nav">
+        <div id="logo" class="logo"><a href="#" target="_self" class="hide-text" title="首页">ChinaXunQin</a></div>
+
+
+        <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
+            <i class="icon-menu"></i>
+        </button>
+        <ul class="nav-item">
+            <li class="set-btn visible-xs-block js-header-avator"><a href="#" target="_self"><img width="40" height="40"></a></li>
+
+            <li>
+                <a href="index.jsp"  target="_self">首页</a>
+            </li>
+            <li><a href="myaccount.jsp"  target="_self">个人中心<i class="icn-new"></i></a></li>
+
+        </ul>
+
+
+      
+    </div>
+</div>
+
+
+
+<div id="main">
+
+    <div class="page-settings">
+        <div class="top">
+            <div class="w960 mauto top_title">
+                <p>修改资料</p>
+            </div>
+        </div>
+        <div class="setting pb10">
+            <div class="contentBox">
+                <div class="formBox">
+                    <div id="setting-profile" class="setting-wrap setting-profile">
+
+                        <div class="wlfg-wrap clearfix ">
+                            <label class="label-name" for="job">头像：</label>
+                            <div class="rlf-group">
+                                <img class="fl avator-img" id="js-portrait" src="http://img.mukewang.com/58492fe600012e8e01800180-200-200.jpg" data-portrait="58492fe600012e8e01800180" width="180" height="180">
+                                <div class="fl ml20 pr">
+                                    <div><input type="button" hidefocus="true" value="换一换" class="js-avator-try avator-try"></div>
+                                    <div id="avator-btns" class="avator-btn-inner">
+                         
+
+
+                                        <div class="avator-btn-wrap">
+                                            <form target="uploadtarget" action="postpic" method="post" enctype="multipart/form-data">
+                                                <a href="javascript:void(0)" hidefocus="true" class="avator-btn-fake">上传头像</a>
+                                                <input class="hide" type="file" title="上传头像" name="fileField" id="upload" accept="image/*">
+                                                <input class="hide" type="hidden" name="type" value="1">
+                                            </form>
+                                            <iframe src="about:blank" id="uploadtarget" name="uploadtarget" frameborder="0" style="display:none;"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cb"></div>
+                                <p class="rlf-tip-wrap errorHint color-red" ></p>
+                            </div>
+                        </div>
+
+                        <form id="profile" >
+
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >昵称：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" value="Sequin_YF" placeholder="请输入昵称."/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            </div>
+
+
+							<div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >手机号：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" value="130xxxxxxxx" placeholder="请输入手机号码."/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            </div>
+
+                          
+
+                    
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name h16 lh16" >性别：</label>
+                                <div class="rlf-group rlf-radio-group">
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="0"   name="sex">保密</label>
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="1"  name="sex">男</label>
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="2" checked="checked" name="sex">女</label>
+                                    <p class="rlf-tip-wrap errorHint color-red"></p>
+                                </div>
+                            </div>
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="aboutme">个性签名：</label>
+                                <div class="rlf-group">
+                                    <div class="pr">
+                                        <textarea name="aboutme"  id="aboutme"  rows="5" class="noresize js-sign moco-form-control"></textarea>
+                                        <p class="numCanInput js-numCanInput ">还可以输入128个字符</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="profile-submit"></label>
+                                <div class="rlf-group">
+                                    <span id="profile-submit"  hidefocus="true"  aria-role="button" class="rlf-btn-green btn-block profile-btn">保存</span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="footer" >
+    <div class="waper">
+        <div class="footerwaper clearfix">
+            <div class="followus r">
+                <a class="followus-weixin" href="javascript:;"  target="_blank" title="微信">
+                    <div class="flw-weixin-box"></div>
+                </a>
+                <a class="followus-weibo" href="http://weibo.com/u/3306361973"  target="_blank" title="新浪微博"></a>
+                <a class="followus-qzone" href="http://user.qzone.qq.com/1059809142/" target="_blank" title="QQ空间"></a>
+            </div>
+         
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--script-->
+<script src="../ssologin.js?v=2.0"></script>
+<script type="text/javascript" src="js/sea.js"></script>
+<script type="text/javascript" src="js/sea_config.js?v=201612141100"></script>
+<script type="text/javascript">seajs.use("../"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
+
+
+
+
+
+<div style="display: none">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff0cfcccd7b1393990c78efdeebff3968' type='text/javascript'%3E%3C/script%3E"));
+        (function (d) {
+            window.bd_cpro_rtid="rHT4P1c";
+            var s = d.createElement("script");s.type = "text/javascript";s.async = true;s.src = location.protocol + "//cpro.baidu.com/cpro/ui/rt.js";
+            var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
+        })(document);
+    </script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            bp.src = '//push.zhanzhang.baidu.com/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+</div>
+</body>
+
+</html>

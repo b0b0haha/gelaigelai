@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    
+    <form-bean name="registerForm" type="com.gelaigelai.struts.form.RegisterForm" />
+    <form-bean name="loginForm" type="com.gelaigelai.struts.form.LoginForm" />
+    <form-bean name="ueditorForm" type="com.gelaigelai.struts.form.UeditorForm" />
+    <form-bean name="commentForm" type="com.gelaigelai.struts.form.CommentForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards >
+    <forward name="index" path="/index.jsp" />
+
+  </global-forwards>
+
+  <action-mappings >
+    <action
+      attribute="registerForm"
+      input="/register.jsp"
+      name="registerForm"
+      path="/register"
+      scope="request"
+      type="com.gelaigelai.struts.action.RegisterAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/index.jsp" />
+      <forward name="fail" path="/register.jsp" />
+    </action>
+    <action
+      attribute="loginForm"
+      input="/login.jsp"
+      name="loginForm"
+      path="/login"
+      scope="request"
+      type="com.gelaigelai.struts.action.LoginAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/index.jsp" />
+      <forward name="fail" path="/login.jsp" />
+    </action>
+    <action
+      input="/index.jsp"
+      path="/displaypoem"
+      type="com.gelaigelai.struts.action.DisplaypoemAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+      <forward name="write" path="/WritePoem.jsp" />
+    </action>
+    <action
+      input="/oldPoem.jsp"
+      path="/oldPoem"
+      type="com.gelaigelai.struts.action.OldPoemAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+      <forward name="write" path="/WritePoem.jsp" />
+    </action>
+    <action
+      input="/mordenPoem.jsp"
+      path="/mordenPoem"
+      type="com.gelaigelai.struts.action.MordenPoemAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+      <forward name="write" path="/WritePoem.jsp" />
+    </action>
+    <action
+      input="/orginPoem.jsp"
+      path="/orginPoem"
+      type="com.gelaigelai.struts.action.OrginPoemAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+      <forward name="write" path="/WritePoem.jsp" />
+    </action>
+    <action
+      input="/oldPoem.jsp"
+      path="/olddisplay"
+      type="com.gelaigelai.struts.action.OlddisplayAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/poemdisplay.jsp" />
+    </action>
+    <action
+      input="/mordenPoem.jsp"
+      path="/moderndisplay"
+      type="com.gelaigelai.struts.action.ModerndisplayAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/poemdisplay.jsp" />
+    </action>
+    <action
+      input="/orginPoem.jsp"
+      path="/orgindisplay"
+      type="com.gelaigelai.struts.action.OrgindisplayAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/poemdisplay.jsp" />
+    </action>
+    <action
+      attribute="ueditorForm"
+      input="/WritePoem.jsp"
+      name="ueditorForm"
+      path="/ueditor"
+      scope="request"
+      type="com.gelaigelai.struts.action.UeditorAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="ok" path="/writePoemshow.jsp" />
+    </action>
+    <action
+      input="/WritePoem.jsp"
+      path="/writeBack"
+      type="com.gelaigelai.struts.action.WriteBackAction">
+      <set-property property="cancellable" value="false" />
+       <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+    </action>
+    <action
+      input="/writePoemshow.jsp"
+      path="/writeShowBack"
+      type="com.gelaigelai.struts.action.WriteShowBackAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+    </action>
+   
+    <action
+      attribute="commentForm"
+      name="commentForm"
+      path="/poemshow"
+      scope="request"
+      parameter="action" 
+      input="/poemdisplay.jsp"
+      type="com.gelaigelai.struts.action.PoemshowAction">
+      <set-property property="cancellable" value="true" />
+       <forward name="old" path="/oldPoem.jsp" />
+      <forward name="morden" path="/mordenPoem.jsp" />
+      <forward name="orgin" path="/orginPoem.jsp" />
+      <forward name="write" path="/WritePoem.jsp" />
+     <forward name="ok" path="/poemdisplay.jsp" />
+    </action>
+    <action
+      attribute="commentForm"
+      name="commentForm"
+      path="/artilce"
+      input="/article.jsp"
+      scope="request"
+      type="com.gelaigelai.struts.action.ArtilceAction">
+      <set-property property="cancellable" value="true" />
+       <forward name="ok" path="/articledisplay.jsp" />
+    </action>
+    <action path="/articlemain" 
+      input="/index.jsp"
+    type="com.gelaigelai.struts.action.ArticlemainAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="ok" path="/article.jsp" />
+    </action>
+    
+    
+    
+    
+    
+
+  </action-mappings>
+
+
+  <message-resources parameter="com.gelaigelai.struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,287 @@
+/* Resets (http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 | License: none (public domain)) */
+
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}body{-webkit-text-size-adjust:none}
+
+/* Box Model */
+
+	*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+/* Container */
+
+	body {
+		min-width: 1200px;
+	}
+
+	.container {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul, li {
+	list-style: none;
+}
+.floatfix {
+	*zoom: 1;
+}
+.floatfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*css public end*/
+
+/*slider start*/
+.slider-contaner {
+	width: 100%;
+	position: relative;
+}
+.slider-item + .slider-item {
+	opacity: 0;
+}
+.slider-item {
+	width: 100%;
+	position: absolute;
+	animation-timing-function: linear;
+	animation-name: fade;
+	animation-iteration-count: infinite;
+	background-size: 100%;
+}
+.focus-container {
+	position: absolute;
+	z-index: 7;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.focus-container li {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+	background: #fff;
+}
+.focus-item {
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	animation-timing-function: linear;
+	animation-name: fade;
+	animation-iteration-count: infinite;
+}
+.focus-item2, .focus-item3, .focus-item4, .focus-item5 {
+	opacity: 0;
+}
+.focus-container ul {
+	margin-left: 46%;
+}
+
+/*设置轮播焦点的位置*/
+.focus-container {
+	bottom: 2%;
+}
+
+/*设置当前图片焦点的颜色*/
+.focus-item {
+	background: #51B1D9;
+}
+
+/*设置动画，请根据实际需要修改秒数*/
+.slider-item, .focus-item {
+	animation-duration: 20s;
+}
+.slider-item1, .focus-item1 {
+	animation-delay: -1s;
+}
+.slider-item2, .focus-item2 {
+	animation-delay: 3s;
+}
+.slider-item3, .focus-item3 {
+	animation-delay: 7s;
+}
+.slider-item4, .focus-item4 {
+	animation-delay: 11s;
+}
+.slider-item5, .focus-item5 {
+	animation-delay: 15s;
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+		z-index: 2;
+	}
+	5% {
+		opacity: 1;
+		z-index: 1;
+	}
+	20% {
+		opacity: 1;
+		z-index: 1;
+	}
+	25% {
+		opacity: 0;
+		z-index: 0;
+	}
+	100% {
+		opacity: 0;
+		z-index: 0;
+	}
+}
+
+/*设置背景，响应式请利用媒体查询根据断点修改路径*/
+
+
+/*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
+.slider, .slider-item {
+	padding-bottom: 40%;
+}
+
+	/* Modifiers */
+	
+		.container.small {
+			width: 900px;
+		}
+
+		.container.big {
+			width: 100%;
+			max-width: 1500px;
+			min-width: 1200px;
+		}
+
+/* Grid */
+
+	/* Cells */
+
+		.\31 2u { width: 100% }
+		.\31 1u { width: 91.6666666667% }
+		.\31 0u { width: 83.3333333333% }
+		.\39 u { width: 75% }
+		.\38 u { width: 66.6666666667% }
+		.\37 u { width: 58.3333333333% }
+		.\36 u { width: 50% }
+		.\35 u { width: 41.6666666667% }
+		.\34 u { width: 33.3333333333% }
+		.\33 u { width: 25% }
+		.\32 u { width: 16.6666666667% }
+		.\31 u { width: 8.3333333333% }
+		.\-11u { margin-left: 91.6666666667% }
+		.\-10u { margin-left: 83.3333333333% }
+		.\-9u { margin-left: 75% }
+		.\-8u { margin-left: 66.6666666667% }
+		.\-7u { margin-left: 58.3333333333% }
+		.\-6u { margin-left: 50% }
+		.\-5u { margin-left: 41.6666666667% }
+		.\-4u { margin-left: 33.3333333333% }
+		.\-3u { margin-left: 25% }
+		.\-2u { margin-left: 16.6666666667% }
+		.\-1u { margin-left: 8.3333333333% }
+
+		.row > * {
+			padding: 50px 0 0 50px;
+			float: left;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.row + .row > * {
+			padding-top: 50px;
+		}
+
+		.row {
+			margin-left: -50px;
+		}
+
+	/* Rows */
+
+		.row:after {
+			content: '';
+			display: block;
+			clear: both;
+			height: 0;
+		}
+
+		.row:first-child > * {
+			padding-top: 0;
+		}
+
+		.row > * {
+			padding-top: 0;
+		}
+
+		/* Modifiers */
+
+			/* Flush */
+
+				.row.flush {
+					margin-left: 0;
+				}
+
+				.row.flush > * {
+					padding: 0 !important;
+				}
+
+			/* Quarter */
+
+				.row.quarter > * {
+					padding: 12.5px 0 0 12.5px;
+				}
+
+				.row.quarter + .row.quarter > * {
+					padding-top: 12.5px;
+				}
+
+				.row.quarter {
+					margin-left: -12.5px;
+				}
+
+			/* Half */
+
+				.row.half > * {
+					padding: 25px 0 0 25px;
+				}
+
+				.row.half + .row.half > * {
+					padding-top: 25px;
+				}
+
+				.row.half {
+					margin-left: -25px;
+				}
+
+			/* One and (a) Half */
+
+				.row.oneandhalf > * {
+					padding: 75px 0 0 75px;
+				}
+
+				.row.oneandhalf + .row.oneandhalf > * {
+					padding-top: 75px;
+				}
+
+				.row.oneandhalf {
+					margin-left: -75px;
+				}
+
+			/* Double */
+
+				.row.double > * {
+					padding: 100px 0 0 100px;
+				}
+
+				.row.double + .row.double > * {
+					padding-top: 100px;
+				}
+
+				.row.double {
+					margin-left: -100px;
+				}

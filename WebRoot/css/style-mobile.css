@@ -1,0 +1,281 @@
+/*
+	MegaCorp by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+body
+{
+	margin-top: 0;
+	font-size: 9.50pt;
+	letter-spacing: 0;
+}
+
+h2, h3, h4, h5, h6
+{
+}
+
+h2
+{
+	letter-spacing: normal !important;
+	font-size: 1.5em !important;
+}
+
+h3
+{
+	font-size: 1.00em !important;
+}
+
+.container
+{
+	padding: 0px 15px;
+}
+
+
+/* Sections/Articles */
+
+	section,
+	article
+	{
+		clear: both;
+		margin: 2em 0em 2em 0em !important;
+	}
+
+	section > :first-child,
+	article > :first-child
+	{
+		margin-top: 0 !important;
+	}
+
+	section:first-child,
+	article:first-child
+	{
+		margin-top: 0 !important;
+	}
+
+
+.button
+{
+	display: block;
+}
+
+.button span
+{
+	display: block;
+}
+
+/* List style 5 */
+
+	ul.style5 
+	{
+		margin-left: 1.35em;
+	}
+	
+	ul.style5 li
+	{
+		line-height: 1.75em;
+		list-style: decimal;
+	}
+
+/* Header */
+
+	#header
+	{
+	}
+
+/* Logo */
+
+	#logo {
+		position: static;
+		padding: 6em 0em 4em 0em;
+		text-align: center;
+	}
+	
+	#logo h1 a {
+		padding-top: 3em;
+		letter-spacing: -1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 2.50em;
+		font-weight: 900;
+		color: #FFF;
+	}
+	
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* UI                                                                            */
+/*********************************************************************************/
+
+#titleBar
+{
+}
+
+	#titleBar .title 
+	{
+		display: none;
+		color: #fff !important;
+		text-align: center;
+		line-height: 44px;
+		font-weight: 800;
+	}
+
+	#titleBar .toggle
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 60px;
+	}
+
+		#titleBar .toggle:before
+		{
+			content: '';
+			display: block;
+			width: 60px;
+			height: 40px;
+			background: rgba(232,232,232,0.5);
+			border-radius: 4px;
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			box-shadow: 0.125em 0.125em 0 0 rgba(0,0,0,0.10);
+		}
+
+		#titleBar .toggle:after
+		{
+			content: '';
+			display: block;
+			width: 20px;
+			height: 12px;
+			position: absolute;
+			left: 25px;
+			top: 20px;
+			background: url('images/mobileUI-site-nav-opener-bg.svg') 0px 0px no-repeat;
+			opacity: 1;
+		}
+
+		#titleBar .toggle:active:after
+		{
+			opacity: 1;
+		}
+
+#navPanel
+{
+	background: #101214;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #888;
+	letter-spacing: 2px;
+	font-size: 1em;
+}
+
+	#navPanel .link
+	{
+		display: block;
+		color: #ddd;
+		text-decoration: none;
+		height: 44px;
+		line-height: 44px;
+		border: 0;
+		border-top: solid 1px #202122;
+		padding: 0 1em 0 1em;
+	}
+	
+		#navPanel .link:first-child
+		{
+			border-top: 0;
+		}
+		
+		#navPanel .link.depth-0
+		{
+			font-weight: 600;
+			color: #fff;
+		}
+
+		#navPanel .indent-1 { display: inline-block; width: 1em; }
+		#navPanel .indent-2 { display: inline-block; width: 2em; }
+		#navPanel .indent-3 { display: inline-block; width: 3em; }
+		#navPanel .indent-4 { display: inline-block; width: 4em; }
+		#navPanel .indent-5 { display: inline-block; width: 5em; }
+		#navPanel .depth-0 { color: #fff; }
+
+/* Banner */
+
+	#banner
+	{
+		height: auto !important;
+		padding: 2em 0 0 0 !important;
+		background-position: right bottom;
+	}
+
+	#banner section
+	{
+		margin-bottom: 28em;
+		text-align: center;
+	}
+
+
+	#banner header .byline
+	{
+		padding: 0em 0em;
+		font-size: 1.20em;
+	}
+
+	#banner h2
+	{
+		padding: 0 0 0 0 !important;
+		letter-spacing: normal;
+	}
+
+	#banner p
+	{
+		padding: 0 0 0 0 !important;
+		font-size: 1.00em;
+	}
+
+/* Wrapper */
+
+	#wrapper
+	{
+		padding: 3em 0em 3em 0em;
+	}
+
+/* Featured Area */
+
+	#featured-wrapper
+	{
+		overflow: hidden;
+		padding: 4em 0em 2em 0em;
+	}
+
+/* Sidebar */
+
+	#sidebar
+	{
+	}
+
+	#sidebar #box1 section
+	{
+		margin: 0em 0em 2em 0em !important;
+	}
+
+/* Two Column Area */
+
+	#two-column section
+	{
+		margin: 0em 0em 2em 0em !important;
+	}
+
+/* Copyright */
+
+	#copyright
+	{
+	}
+
+
+
