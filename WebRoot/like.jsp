@@ -34,11 +34,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="myaccount.jsp" accesskey="1" title="">我的诗歌</a></li>
-				<li><a href="fans.jsp" accesskey="2" title="">我的粉丝</a></li>
-				<li><a href="follow.jsp" accesskey="3" title="">我关注的</a></li>
-				<li  class="current_page_item"><a href="like.jsp" accesskey="4" title="">我收藏的</a></li>
-				<li><a href="change.jsp" accesskey="5" title="">资料修改</a></li>
+				<li><a href="/new/personal.do?userId=${userId }&page=1" accesskey="1" title="">我的诗歌</a></li>
+				<li><a href="fans.jsp?userId=${userId }" accesskey="2" title="">我的粉丝</a></li>
+				<li><a href="follow.jsp?userId=${userId }" accesskey="3" title="">我关注的</a></li>
+				<li  class="current_page_item"><a href="like.jsp?userId=${userId }" accesskey="4" title="">我收藏的</a></li>
+				<li><a href="change.jsp?userId=${userId }" accesskey="5" title="">资料修改</a></li>
 			</ul>
 		</div>
 	</div>

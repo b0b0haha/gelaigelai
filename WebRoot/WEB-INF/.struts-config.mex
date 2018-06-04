@@ -10,34 +10,210 @@
   <StrutsActivity path="/moderndisplay.do" location="1080,90" dimension="121,121" />
   <StrutsActivity path="/orgindisplay.do" location="1215,90" dimension="122,121" />
   <StrutsActivity path="/ueditor.do" location="1020,675" dimension="282,104" />
+  <StrutsActivity path="/writeBack.do" location="1245,540" dimension="297,104" />
+  <StrutsActivity path="/writeShowBack.do" location="1200,945" dimension="328,104" />
+  <StrutsActivity path="/poemshow.do" location="50,1050" dimension="301,104" />
+  <StrutsActivity path="/artilce.do" location="-615,930" dimension="274,104" />
+  <StrutsActivity path="/articlemain.do" location="950,1150" dimension="302,104" />
+  <StrutsActivity path="/personal.do" location="50,1250" dimension="288,104" />
+  <StrutsActivity path="index;6" location="650,650" dimension="99,87" />
   <StrutsActivity path="/register.jsp" location="135,225" dimension="150,100" />
   <StrutsActivity path="/index.jsp" location="315,90" dimension="150,100" />
   <StrutsActivity path="/login.jsp" location="-60,-75" dimension="150,100" />
   <StrutsActivity path="/oldPoem.jsp" location="435,225" dimension="150,100" />
-  <StrutsActivity path="/WritePoem.jsp" location="1035,855" dimension="150,100" />
-  <StrutsActivity path="/mordenPoem.jsp" location="615,225" dimension="150,100" />
   <StrutsActivity path="/orginPoem.jsp" location="810,225" dimension="150,100" />
+  <StrutsActivity path="/mordenPoem.jsp" location="615,225" dimension="150,100" />
+  <StrutsActivity path="/WritePoem.jsp" location="1035,855" dimension="150,100" />
   <StrutsActivity path="/poemdisplay.jsp" location="50,850" dimension="132,53" />
   <StrutsActivity path="/writePoemshow.jsp" location="1391,824" dimension="150,100" />
-  <StrutsActivity path="/writeBack.do" location="1245,540" dimension="297,104" />
-  <StrutsActivity path="/writeShowBack.do" location="1200,945" dimension="328,104" />
-  <StrutsActivity path="index;6" location="650,650" dimension="99,87" />
-  <StrutsActivity path="/poemshow.do" location="50,1050" dimension="301,104" />
-  <StrutsActivity path="/artilce.do" location="-615,930" dimension="274,104" />
-  <StrutsActivity path="/article.jsp" location="650,850" dimension="92,53" />
   <StrutsActivity path="/articledisplay.jsp" location="650,1050" dimension="133,53" />
-  <StrutsActivity path="/articlemain.do" location="950,1150" dimension="302,104" />
-  <StrutsTransition id="/register.do,ok,/index.jsp,1" routingType="0">
+  <StrutsActivity path="/article.jsp" location="650,850" dimension="92,53" />
+  <StrutsActivity path="/myaccount.jsp" location="650,1250" dimension="119,53" />
+  <StrutsTransition id="/index.jsp,null,/personal.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="136,140" />
-      <AbsolutePoint location="315,140" />
+      <AbsolutePoint location="390,140" />
+      <AbsolutePoint location="194,1302" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/oldPoem.jsp,null,/oldPoem.do,2" routingType="0">
+  <StrutsTransition id="/mordenPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="435,275" />
-      <AbsolutePoint location="300,275" />
-      <AbsolutePoint location="300,450" />
+      <AbsolutePoint location="885,450" />
+      <AbsolutePoint location="885,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/articlemain.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="390,140" />
+      <AbsolutePoint location="1101,1202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/article.jsp,null,/artilce.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="696,903" />
+      <AbsolutePoint location="696,970" />
+      <AbsolutePoint location="-341,970" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/writeBack.do,old,/oldPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,629" />
+      <AbsolutePoint location="510,629" />
+      <AbsolutePoint location="510,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgindisplay.do,ok,/poemdisplay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1276,90" />
+      <AbsolutePoint location="1276,-240" />
+      <AbsolutePoint location="-315,-240" />
+      <AbsolutePoint location="-315,794" />
+      <AbsolutePoint location="116,794" />
+      <AbsolutePoint location="116,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poemdisplay.jsp,null,/poemshow.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="116,903" />
+      <AbsolutePoint location="116,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/register.jsp,null,/register.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="135,275" />
+      <AbsolutePoint location="-37,275" />
+      <AbsolutePoint location="-37,179" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orginPoem.do,write,/WritePoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,754" />
+      <AbsolutePoint location="202,794" />
+      <AbsolutePoint location="1110,794" />
+      <AbsolutePoint location="1110,855" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,fail,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="225,-68" />
+      <AbsolutePoint location="90,-68" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mordenPoem.do,write,/WritePoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="809,554" />
+      <AbsolutePoint location="809,888" />
+      <AbsolutePoint location="1035,888" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/articlemain.do,ok,/article.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1202" />
+      <AbsolutePoint location="635,1202" />
+      <AbsolutePoint location="635,876" />
+      <AbsolutePoint location="650,876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/addlike.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="327,190" />
+      <AbsolutePoint location="327,430" />
+      <AbsolutePoint location="570,430" />
+      <AbsolutePoint location="570,1402" />
+      <AbsolutePoint location="950,1402" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mordenPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="690,450" />
+      <AbsolutePoint location="690,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oldPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="342,502" />
+      <AbsolutePoint location="635,502" />
+      <AbsolutePoint location="635,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/displaypoem.do,morden,/mordenPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="682,104" />
+      <AbsolutePoint location="682,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/writeShowBack.do,orgin,/orginPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1528,997" />
+      <AbsolutePoint location="1723,997" />
+      <AbsolutePoint location="1723,400" />
+      <AbsolutePoint location="915,400" />
+      <AbsolutePoint location="915,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orginPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="354,672" />
+      <AbsolutePoint location="399,672" />
+      <AbsolutePoint location="399,340" />
+      <AbsolutePoint location="825,340" />
+      <AbsolutePoint location="825,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oldPoem.do,write,/WritePoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="342,532" />
+      <AbsolutePoint location="635,532" />
+      <AbsolutePoint location="635,839" />
+      <AbsolutePoint location="1080,839" />
+      <AbsolutePoint location="1080,855" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/writeBack.do,morden,/mordenPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1246,540" />
+      <AbsolutePoint location="1246,430" />
+      <AbsolutePoint location="750,430" />
+      <AbsolutePoint location="750,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oldPoem.do,old,/oldPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="342,472" />
+      <AbsolutePoint location="450,472" />
+      <AbsolutePoint location="450,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/displaypoem.do,old,/oldPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,104" />
+      <AbsolutePoint location="570,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WritePoem.jsp,null,/ueditor.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1161,855" />
+      <AbsolutePoint location="1161,779" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/artilce.do,ok,/articledisplay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-478,1034" />
+      <AbsolutePoint location="-478,1169" />
+      <AbsolutePoint location="716,1169" />
+      <AbsolutePoint location="716,1103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poemshow.do,write,/WritePoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,1050" />
+      <AbsolutePoint location="202,918" />
+      <AbsolutePoint location="1035,918" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,ok,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="360,14" />
+      <AbsolutePoint location="360,90" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/orginPoem.jsp,null,/orginPoem.do,2" routingType="0">
@@ -47,6 +223,41 @@
       <AbsolutePoint location="1020,599" />
       <AbsolutePoint location="202,599" />
       <AbsolutePoint location="202,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/olddisplay.do,ok,/poemdisplay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="990,211" />
+      <AbsolutePoint location="990,1000" />
+      <AbsolutePoint location="146,1000" />
+      <AbsolutePoint location="146,903" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poemshow.do,ok,/poemdisplay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="86,1050" />
+      <AbsolutePoint location="86,903" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orginPoem.jsp,null,/orgindisplay.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="960,245" />
+      <AbsolutePoint location="1246,245" />
+      <AbsolutePoint location="1246,211" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oldPoem.jsp,null,/oldPoem.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="435,275" />
+      <AbsolutePoint location="300,275" />
+      <AbsolutePoint location="300,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WritePoem.jsp,null,/writeBack.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1185,905" />
+      <AbsolutePoint location="1376,905" />
+      <AbsolutePoint location="1376,644" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/poemshow.do,morden,/mordenPoem.jsp,1" routingType="0">
@@ -60,11 +271,18 @@
       <AbsolutePoint location="742,225" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/poemshow.do,write,/WritePoem.jsp,1" routingType="0">
+  <StrutsTransition id="/register.do,fail,/register.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="202,1050" />
-      <AbsolutePoint location="202,918" />
-      <AbsolutePoint location="1035,918" />
+      <AbsolutePoint location="-7,179" />
+      <AbsolutePoint location="-7,245" />
+      <AbsolutePoint location="135,245" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ueditor.do,ok,/writePoemshow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1302,727" />
+      <AbsolutePoint location="1466,727" />
+      <AbsolutePoint location="1466,824" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/moderndisplay.do,ok,/poemdisplay.jsp,1" routingType="0">
@@ -76,83 +294,13 @@
       <AbsolutePoint location="50,876" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/poemshow.do,ok,/poemdisplay.jsp,1" routingType="0">
+  <StrutsTransition id="/mordenPoem.jsp,null,/moderndisplay.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="86,1050" />
-      <AbsolutePoint location="86,903" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/writeBack.do,old,/oldPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1245,629" />
-      <AbsolutePoint location="510,629" />
-      <AbsolutePoint location="510,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/login.do,ok,/index.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="360,14" />
-      <AbsolutePoint location="360,90" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/poemshow.do,old,/oldPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="50,1102" />
-      <AbsolutePoint location="-630,1102" />
-      <AbsolutePoint location="-630,40" />
-      <AbsolutePoint location="480,40" />
-      <AbsolutePoint location="480,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/WritePoem.jsp,null,/ueditor.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1161,855" />
-      <AbsolutePoint location="1161,779" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/orginPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="354,732" />
-      <AbsolutePoint location="600,732" />
-      <AbsolutePoint location="600,275" />
-      <AbsolutePoint location="615,275" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/writeShowBack.do,old,/oldPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1528,967" />
-      <AbsolutePoint location="1587,967" />
-      <AbsolutePoint location="1587,370" />
-      <AbsolutePoint location="570,370" />
-      <AbsolutePoint location="570,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/poemdisplay.jsp,null,/poemshow.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="116,903" />
-      <AbsolutePoint location="116,1050" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="index;6,null,/index.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="699,737" />
-      <AbsolutePoint location="699,769" />
-      <AbsolutePoint location="369,769" />
-      <AbsolutePoint location="369,190" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/oldPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="196,450" />
-      <AbsolutePoint location="196,400" />
-      <AbsolutePoint location="855,400" />
-      <AbsolutePoint location="855,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/index.jsp,null,/articlemain.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="390,140" />
-      <AbsolutePoint location="1101,1202" />
+      <AbsolutePoint location="765,275" />
+      <AbsolutePoint location="794,275" />
+      <AbsolutePoint location="794,-165" />
+      <AbsolutePoint location="1140,-165" />
+      <AbsolutePoint location="1140,90" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/displaypoem.do,write,/WritePoem.jsp,1" routingType="0">
@@ -164,166 +312,6 @@
       <AbsolutePoint location="1110,955" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/writeBack.do,modern,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1246,540" />
-      <AbsolutePoint location="1246,430" />
-      <AbsolutePoint location="750,430" />
-      <AbsolutePoint location="750,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/displaypoem.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="779,74" />
-      <AbsolutePoint location="885,74" />
-      <AbsolutePoint location="885,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/mordenPoem.jsp,null,/moderndisplay.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="765,275" />
-      <AbsolutePoint location="794,275" />
-      <AbsolutePoint location="794,-165" />
-      <AbsolutePoint location="1140,-165" />
-      <AbsolutePoint location="1140,90" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/orginPoem.jsp,null,/orgindisplay.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="960,245" />
-      <AbsolutePoint location="1246,245" />
-      <AbsolutePoint location="1246,211" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/mordenPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="885,450" />
-      <AbsolutePoint location="885,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/mordenPoem.do,write,/WritePoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="809,554" />
-      <AbsolutePoint location="809,888" />
-      <AbsolutePoint location="1035,888" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/orginPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="354,672" />
-      <AbsolutePoint location="399,672" />
-      <AbsolutePoint location="399,340" />
-      <AbsolutePoint location="825,340" />
-      <AbsolutePoint location="825,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/olddisplay.do,ok,/poemdisplay.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="990,211" />
-      <AbsolutePoint location="990,1000" />
-      <AbsolutePoint location="146,1000" />
-      <AbsolutePoint location="146,903" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/register.do,fail,/register.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="-7,179" />
-      <AbsolutePoint location="-7,245" />
-      <AbsolutePoint location="135,245" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/writeShowBack.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1528,997" />
-      <AbsolutePoint location="1723,997" />
-      <AbsolutePoint location="1723,400" />
-      <AbsolutePoint location="915,400" />
-      <AbsolutePoint location="915,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/writeShowBack.do,morden,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1200,1030" />
-      <AbsolutePoint location="-105,1030" />
-      <AbsolutePoint location="-105,205" />
-      <AbsolutePoint location="652,205" />
-      <AbsolutePoint location="652,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/artilce.do,ok,/articledisplay.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="-478,1034" />
-      <AbsolutePoint location="-478,1304" />
-      <AbsolutePoint location="716,1304" />
-      <AbsolutePoint location="716,1103" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/displaypoem.do,morden,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="682,104" />
-      <AbsolutePoint location="682,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/poemshow.do,orgin,/orginPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="50,1072" />
-      <AbsolutePoint location="-285,1072" />
-      <AbsolutePoint location="-285,-390" />
-      <AbsolutePoint location="855,-390" />
-      <AbsolutePoint location="855,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/orgindisplay.do,ok,/poemdisplay.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1276,90" />
-      <AbsolutePoint location="1276,-240" />
-      <AbsolutePoint location="-315,-240" />
-      <AbsolutePoint location="-315,794" />
-      <AbsolutePoint location="116,794" />
-      <AbsolutePoint location="116,850" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/mordenPoem.do,old,/oldPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="650,472" />
-      <AbsolutePoint location="540,472" />
-      <AbsolutePoint location="540,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/article,null,/artilce.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="351,893" />
-      <AbsolutePoint location="386,970" />
-      <AbsolutePoint location="-341,970" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/displaypoem.do,old,/oldPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="570,104" />
-      <AbsolutePoint location="570,225" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/mordenPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="690,450" />
-      <AbsolutePoint location="690,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/index.jsp,null,/displaypoem.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="465,170" />
-      <AbsolutePoint location="652,170" />
-      <AbsolutePoint location="652,104" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/writeBack.do,morden,/mordenPoem.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1246,540" />
-      <AbsolutePoint location="1246,430" />
-      <AbsolutePoint location="750,430" />
-      <AbsolutePoint location="750,325" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
   <StrutsTransition id="/oldPoem.jsp,null,/olddisplay.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="510,225" />
@@ -331,26 +319,28 @@
       <AbsolutePoint location="930,140" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/oldPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
+  <StrutsTransition id="/writeBack.do,orgin,/orginPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="342,502" />
-      <AbsolutePoint location="635,502" />
-      <AbsolutePoint location="635,325" />
+      <AbsolutePoint location="1363,540" />
+      <AbsolutePoint location="1363,275" />
+      <AbsolutePoint location="960,275" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/oldPoem.do,old,/oldPoem.jsp,1" routingType="0">
+  <StrutsTransition id="index;6,null,/index.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="342,472" />
-      <AbsolutePoint location="450,472" />
-      <AbsolutePoint location="450,325" />
+      <AbsolutePoint location="699,737" />
+      <AbsolutePoint location="699,769" />
+      <AbsolutePoint location="369,769" />
+      <AbsolutePoint location="369,190" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/articlemain.do,ok,/article.jsp,1" routingType="0">
+  <StrutsTransition id="/poemshow.do,old,/oldPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="950,1202" />
-      <AbsolutePoint location="635,1202" />
-      <AbsolutePoint location="635,876" />
-      <AbsolutePoint location="650,876" />
+      <AbsolutePoint location="50,1102" />
+      <AbsolutePoint location="-630,1102" />
+      <AbsolutePoint location="-630,40" />
+      <AbsolutePoint location="480,40" />
+      <AbsolutePoint location="480,225" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/writePoemshow.jsp,null,/writeShowBack.do,2" routingType="0">
@@ -366,62 +356,58 @@
       <AbsolutePoint location="480,325" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/WritePoem.jsp,null,/writeBack.do,2" routingType="0">
+  <StrutsTransition id="/writeShowBack.do,morden,/mordenPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1185,905" />
-      <AbsolutePoint location="1376,905" />
-      <AbsolutePoint location="1376,644" />
+      <AbsolutePoint location="1200,1030" />
+      <AbsolutePoint location="-105,1030" />
+      <AbsolutePoint location="-105,205" />
+      <AbsolutePoint location="652,205" />
+      <AbsolutePoint location="652,225" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/article.jsp,null,/artilce.do,2" routingType="0">
+  <StrutsTransition id="/displaypoem.do,orgin,/orginPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="696,903" />
-      <AbsolutePoint location="696,970" />
-      <AbsolutePoint location="-341,970" />
+      <AbsolutePoint location="779,74" />
+      <AbsolutePoint location="885,74" />
+      <AbsolutePoint location="885,225" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/writeBack.do,orgin,/orginPoem.jsp,1" routingType="0">
+  <StrutsTransition id="/writeShowBack.do,old,/oldPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1363,540" />
-      <AbsolutePoint location="1363,275" />
-      <AbsolutePoint location="960,275" />
+      <AbsolutePoint location="1528,967" />
+      <AbsolutePoint location="1587,967" />
+      <AbsolutePoint location="1587,370" />
+      <AbsolutePoint location="570,370" />
+      <AbsolutePoint location="570,325" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/oldPoem.do,write,/WritePoem.jsp,1" routingType="0">
+  <StrutsTransition id="/poemshow.do,orgin,/orginPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="342,532" />
-      <AbsolutePoint location="635,532" />
-      <AbsolutePoint location="635,839" />
-      <AbsolutePoint location="1080,839" />
-      <AbsolutePoint location="1080,855" />
+      <AbsolutePoint location="50,1072" />
+      <AbsolutePoint location="-285,1072" />
+      <AbsolutePoint location="-285,-390" />
+      <AbsolutePoint location="855,-390" />
+      <AbsolutePoint location="855,225" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/login.do,fail,/login.jsp,1" routingType="0">
+  <StrutsTransition id="/register.do,ok,/index.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="225,-68" />
-      <AbsolutePoint location="90,-68" />
+      <AbsolutePoint location="136,140" />
+      <AbsolutePoint location="315,140" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/orginPoem.do,write,/WritePoem.jsp,1" routingType="0">
+  <StrutsTransition id="/index.jsp,null,/displaypoem.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="202,754" />
-      <AbsolutePoint location="202,794" />
-      <AbsolutePoint location="1110,794" />
-      <AbsolutePoint location="1110,855" />
+      <AbsolutePoint location="465,170" />
+      <AbsolutePoint location="652,170" />
+      <AbsolutePoint location="652,104" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/ueditor.do,ok,/writePoemshow.jsp,1" routingType="0">
+  <StrutsTransition id="/mordenPoem.do,old,/oldPoem.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1302,727" />
-      <AbsolutePoint location="1466,727" />
-      <AbsolutePoint location="1466,824" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/register.jsp,null,/register.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="135,275" />
-      <AbsolutePoint location="-37,275" />
-      <AbsolutePoint location="-37,179" />
+      <AbsolutePoint location="650,472" />
+      <AbsolutePoint location="540,472" />
+      <AbsolutePoint location="540,325" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/mordenPoem.jsp,null,/mordenPoem.do,2" routingType="0">
@@ -430,10 +416,32 @@
       <AbsolutePoint location="720,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/personal.do,ok,/myaccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="338,1276" />
+      <AbsolutePoint location="650,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oldPoem.do,orgin,/orginPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="196,450" />
+      <AbsolutePoint location="196,400" />
+      <AbsolutePoint location="855,400" />
+      <AbsolutePoint location="855,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/login.jsp,null,/login.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="90,-38" />
       <AbsolutePoint location="225,-38" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orginPoem.do,morden,/mordenPoem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="354,732" />
+      <AbsolutePoint location="600,732" />
+      <AbsolutePoint location="600,275" />
+      <AbsolutePoint location="615,275" />
     </AutomaticBendpoints>
   </StrutsTransition>
 </FlowViewLayout>

@@ -162,6 +162,14 @@
       <set-property property="cancellable" value="true" />
       <forward name="ok" path="/article.jsp" />
     </action>
+    <action path="/personal" 
+          input="/index.jsp"
+          scope="request"
+    type="com.gelaigelai.struts.action.PersonalAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="ok" path="/myaccount.jsp" />
+    </action>
+    
     
     
     

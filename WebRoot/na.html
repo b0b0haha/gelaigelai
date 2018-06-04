@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Single</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Walk Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<script src="js/audiojs/audio.min.js"></script>
+<script type="text/javascript">
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
+<style>
+#click{margin-top: 32px;height:40px;}
+#click a{
+	text-decoration: none;
+	background: #2f435e;
+	color:#f2f2f2;
+	padding:10px 30px 10px 30px;
+	font-size:16px;
+	font-family: 微软雅黑;
+}
+#click a:hover{background: #385f9e;}
+</style>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body class="cbp-spmenu-push">
+<!-- banner -->
+	<div class="banner1">
+		<div class="container">
+			<div class="header">
+				<div class="header-left">
+					<div id="click">
+						<a id="write" href="#">我要写诗</a>
+					</div>
+				</div>
+				<div class="header-left1">
+					<h1><a href="index.html">gelaigelai</a></h1>
+				</div>
+				<!-- #push_sidebar -->
+				<div class="top-nav">
+					 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+						<h3>Menu</h3>
+						<ul>
+							<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+							<li><a href="about.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>关于我们</a></li>
+							<li><a href="poem.html"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>诗歌</a></li>
+							<li><a href="poet.html"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>诗人</a></li>
+							<li><a href="poetics.html"><span class="glyphicon glyphicon-text-size" aria-hidden="true"></span>诗学</a></li>
+							<li><a href="news.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>诗讯</a></li>
+						</ul>
+					</nav>
+					 <div class="main buttonset">	
+					<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
+						<button id="showRightPush"><img src="images/menu.png" alt=""/></button>
+					</div>
+				<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+						<script src="js/classie.js"></script>
+						<script>
+							var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+							showRightPush = document.getElementById( 'showRightPush' ),
+							body = document.body;
+
+							showRightPush.onclick = function() {
+								classie.toggle( this, 'active' );
+								classie.toggle( body, 'cbp-spmenu-push-toleft' );
+								classie.toggle( menuRight, 'cbp-spmenu-open' );
+								disableOther( 'showRightPush' );
+							};
+
+							function disableOther( button ) {
+								if( button !== 'showRightPush' ) {
+									classie.toggle( showRightPush, 'disabled' );
+								}
+							}
+						</script>
+						<!-- /script-for-menu -->
+				</div>
+				<!-- /#push_sidebar -->
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //banner -->
+<!-- single -->
+	<div class="single">
+		<div class="container">
+			<div class="col-md-4 single-right">
+				<div class="blog-right1">
+					
+					<div class="categories">
+						<h3>Categories</h3>
+						<ul>
+							<li><a href="old.html">古诗</a></li>
+							<li><a href="modern.html">现代诗</a></li>
+							<li><a href="poem.html">原创诗</a></li>
+						</ul>
+					</div>
+					<div class="categories categories-mid">
+						<!-- <h3>Archives</h3>
+						<ul>
+							<li><a href="#">May 20,2009</a></li>
+							<li><a href="#">July 31,2010</a></li>
+							<li><a href="#">January 20,2012</a></li>
+							<li><a href="#">November 2,2012</a></li>
+							<li><a href="#">December 25,2014</a></li>
+							<li><a href="#">January 14,2015</a></li>
+						</ul> -->
+					</div>
+					<div class="related-posts">
+						<h3>猜你喜欢</h3>
+						<div class="related-post">
+							<div class="related-post-left">
+								<a href="single.html"><img src="images/3_.jpg" alt=" " class="img-responsive" /></a>
+							</div>
+							<div class="related-post-right">
+								<h4><a href="single.html">我在地铁里如是想</a></h4>
+								<p>我穿梭在黑暗隧道里 
+									<span>想着离太阳最近的部落</span>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="related-post">
+							<div class="related-post-left">
+								<a href="single.html"><img src="images/4_.jpg" alt=" " class="img-responsive" /></a>
+							</div>
+							<div class="related-post-right">
+								<h4><a href="single.html">一种焦虑</a></h4>
+								<p>笔，没水了 
+									<span>那, 作业怎么写呢</span>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="related-post">
+							<div class="related-post-left">
+								<a href="single.html"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+							</div>
+							<div class="related-post-right">
+								<h4><a href="single.html">稳定</a></h4>
+								<p>节食，会反弹 
+									<span>吃药,有副作用</span>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="related-post">
+							<div class="related-post-left">
+								<a href="single.html"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+							</div>
+							<div class="related-post-right">
+								<h4><a href="single.html">我先于冬天来到那个山坡上</a></h4>
+								<p>从三月到十一月的夏天
+									<span>那些，所有睡过的地方都是荒野</span>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 single-left">
+				
+				<audio src="#" preload="auto" ></audio>
+				<div class="single-left1">
+					<br/>
+					<h5>那时的我</h5>
+					<div class="day">15/09/20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="bai.html">徐怀静</a></div>
+					<div class="single-left1-grids">
+						<div class="col-md-8 single-left1-grid">
+					<div class="tu">
+							<img src="images/13.jpg" alt=" " class="img-responsive" style="float:center;"/></div>
+							<div class="shi" style="text-align: center;"><p>这世界充满着太多的苦难<br/>对你的想念<br/>一不小心<br/>就变成一种执念<br/>所以<br/>你必须沉默如大地<br/>所以<br/>你必须广阔如大海<br/><br/>让我深深地忏悔吧<br/>这世界需要不断的忏悔<br/>一切没有太明显的界限<br/>信仰和眷恋<br/>想念和执念<br/>我时常遭受焦虑的痛苦<br/>这一颗心<br/>如何才能平静舒缓<br/> <br/>我不愿意像那蚊蝇<br/>在你的院落悲哀地合唱<br/>升起又沉落<br/><br/>让我像那条河<br/>带着某种使命<br/>为了滋润，为了净化，<br/>流过你居住的地方<br>悄无声息<br/><br/>让我像想念远方一样地想念你<br/>就像12岁时的我<br/>——长江边的那个眺望远山的小姑娘<br/> <br/>修行在<br/>在城市的车流和乌鸦的叫声中<br/>我有着朝圣者的灵魂<br/>但迷惘和抑郁的流沙会袭击我<br/>我有时<br/>郁郁寡欢&nbsp;依塌而卧<br/> <br/>我想念家乡&nbsp;想念你 <br/>忏悔对你的想念<br/>担心想念会变成执念<br/>会玷污美好<br/><br/>让我又回到少女时代<br/>那时我经常眺望远方<br/>那时我纯洁又坚强<br/>那时我心中已有爱.
+</span></p></div>
+						</div>
+						
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="single-left2">
+					<h4>"At vero eos et accusamus et iusto odio dignissimos ducimus qui 
+						blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
+						et quas molestias excepturi sint occaecati cupiditate non provident, 
+						similique sunt in culpa qui officia deserunt mollitia animi, id est 
+						laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita 
+						distinctio. Nam libero tempore, cum soluta nobis est eligendi optio 
+						cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
+						omnis voluptas assumenda est, omnis dolor repellendus.</h4>
+					<div class="col-md-4 single-left1-grid">
+						<img src="images/17.jpg" alt=" " class="img-responsive" />/*诗人图片*/
+					</div>
+					<div class="col-md-8 single-left1-grid">
+①						<p><span>作者：徐怀静
+译者：措姆 北京邮电大学经济管理学院16级本科生
+</span></p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- <div class="single-left3">
+					<p>In a free hour, when our power of 
+						choice is untrammelled and when nothing prevents our being able 
+						to do what we like best, every pleasure is to be welcomed and 
+						every pain avoided. But in certain circumstances and owing to 
+						the claims of duty or the obligations of business 
+						it will frequently occur.</p>
+					
+				</div> -->
+				<a href=""><img src="tx/like.jpg" style="width:30px;height:30px;float: right;" alt="我喜欢"></a>
+				<a href=""><img src="tx/like2.jpg" style="width:30px;height:30px;float: right;" alt="我喜欢"></a>
+				<!-- <div class="single-left3-grids">
+						<div class="col-md-6 single-left3-grid">
+							<img src="images/5.jpg" alt=" " class="img-responsive" /> -->
+							<br/><br/><br/>
+							<h4>鉴赏：</h4>
+							<p>在车流不息的都市里，你是否想念过远方？想念过一个人？你是否很快意识到，这份想念不能失控，不能变成一种执念？于是你开始想念少年时的你。那时的你，胸怀大志；那时的你，想冲破家乡，去外面的世界；那时的你，其实已经懂得爱，但你从不让爱的感觉羁绊自己；那时的你，纯洁又智慧；那时的你，懂得如何放下啊，冲破爱。于是，在都市的车流声里，在内心的挣扎中，你从想念一个远方的人，变为了想念少年时代的你自己</p>
+						<p></p>
+						<h4>翻译：</h4>
+							<p>In a free hour, when our power of 
+						choice is untrammelled and when nothing prevents our being able 
+						to do what we like best, every pleasure is to be welcomed and 
+						every pain avoided. But in certain circumstances and owing to 
+						the claims of duty or the obligations of business 
+						it will frequently occur.</p>
+						<p>In a free hour, when our power of 
+						choice is untrammelled and when nothing prevents our being able 
+						to do what we like best, every pleasure is to be welcomed and 
+						every pain avoided. But in certain circumstances and owing to 
+						the claims of duty or the obligations of business 
+						it will frequently occur.</p>
+						<h4>评价：</h4>
+							<p>In a free hour, when our power of 
+						choice is untrammelled and when nothing prevents our being able 
+						to do what we like best, every pleasure is to be welcomed and 
+						every pain avoided. But in certain circumstances and owing to 
+						the claims of duty or the obligations of business 
+						it will frequently occur.</p>
+						<p>In a free hour, when our power of 
+						choice is untrammelled and when nothing prevents our being able 
+						to do what we like best, every pleasure is to be welcomed and 
+						every pain avoided. But in certain circumstances and owing to 
+						the claims of duty or the obligations of business 
+						it will frequently occur.</p>
+						<!-- </div>
+					</div> -->
+				<br/><br/>
+				<div class="comments-admin">
+					<h4>3 Comments</h4>
+					<div class="comments-admin-grids">
+						<div class="comments-admin-grid">
+							<div class="comments-admin-grid-left">
+								<img src="images/3.png" alt=" " class="img-responsive" />
+							</div>
+							<div class="comments-admin-grid-right">
+								<p>In a free hour, when our power of 
+									choice is untrammelled and when nothing prevents our being able 
+									to do what we like best, every pleasure is to be welcomed and 
+									every pain avoided. But in certain circumstances and owing to 
+									the claims of duty or the obligations of business 
+									it will frequently occur.</p>
+								<div class="reply">
+									<a href="#">Reply</a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="comments-admin-grid">
+							<div class="comments-admin-grid-left">
+								<img src="images/4.png" alt=" " class="img-responsive" />
+							</div>
+							<div class="comments-admin-grid-right">
+								<p>In a free hour, when our power of 
+									choice is untrammelled and when nothing prevents our being able 
+									to do what we like best, every pleasure is to be welcomed and 
+									every pain avoided. But in certain circumstances and owing to 
+									the claims of duty or the obligations of business 
+									it will frequently occur.</p>
+								<div class="reply">
+									<a href="#">Reply</a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="comments-admin-grid">
+							<div class="comments-admin-grid-left">
+								<img src="images/5.png" alt=" " class="img-responsive" />
+							</div>
+							<div class="comments-admin-grid-right">
+								<p>In a free hour, when our power of 
+									choice is untrammelled and when nothing prevents our being able 
+									to do what we like best, every pleasure is to be welcomed and 
+									every pain avoided. But in certain circumstances and owing to 
+									the claims of duty or the obligations of business 
+									it will frequently occur.</p>
+								<div class="reply">
+									<a href="#">Reply</a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="leave-a-comment">
+				<h3>Leave your comment here</h3> 
+				<form>
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input type="email" value="Email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}" required="">
+					<input type="text" value="Phone Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone Number';}" required="">
+					<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type Your Comment here...';}" required="">Type Your Comment here...</textarea>
+					<input type="submit" value="Add Comment">
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- //single -->
+<!-- footer -->
+<!-- 	<div class="footer"> -->
+		<!-- <div class="container"> -->
+			<!-- <div class="col-md-3 footer-grid">
+				<img src="images/8.jpg" alt=" " class="img-responsive" />
+			</div> -->
+		<!-- 	<div class="col-md-3 footer-grid">
+				<h2><a href="index.html">Walk<span>Where To Go This Summer?</span></a></h2>
+				<p>But I must explain to you how all this mistaken idea of denouncing pleasure 
+					and praising pain was born.</p>
+				<ul>
+					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 738 Diamond Road, New York City, USA.</li>
+					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">info@example.com</a></li>
+					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +7683 928 829</li>
+				</ul>
+			</div> -->
+			<!-- <div class="col-md-3 footer-grid">
+				<h4>Flickr Photos</h4>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="footer-grid1">
+					<a href="single.html"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div> -->
+			<!-- <div class="col-md-3 footer-grid">
+				<h4>Booking Hours</h4>
+				<div class="footer-grid2">
+					<ul class="timings">
+						<li>Monday <i>.....</i> 10AM to 7PM</li>
+						<li>Friday <i>.....</i> 9AM to 5PM</li>
+						<li>Sunday <i>.....</i> 10AM to 2PM</li>
+					</ul>
+					<div class="social-icons social-icons1">
+						<ul>
+							<li><a href="#" class="twitter"></a></li>
+							<li><a href="#" class="facebook"></a></li>
+							<li><a href="#" class="google"></a></li>
+							<li><a href="#" class="p"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+			<!-- <div class="clearfix"> </div> -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="footer-copy">
+		
+	</div> -->
+<!-- //footer -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

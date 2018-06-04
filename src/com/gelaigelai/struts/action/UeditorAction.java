@@ -41,8 +41,10 @@ import com.gelaigelai.common.Transform;
 import com.gelaigelai.domain.Image;
 import com.gelaigelai.domain.Poem;
 import com.gelaigelai.domain.Type;
+import com.gelaigelai.domain.User;
 import com.gelaigelai.service.ImageService;
 import com.gelaigelai.service.PoemService;
+import com.gelaigelai.service.UserService;
 
 /** 
  * MyEclipse Struts
@@ -68,11 +70,14 @@ public class UeditorAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// TODO Auto-generated method stub
+		//获取用户ID
 		Integer userId=Integer.parseInt(request.getParameter("userId"));
+		
 		PoemService poemService=new PoemService();
 		ImageService imageService=new ImageService();
 		Session session=HibernateUtil.getsSession();
 		Transaction tx=session.beginTransaction();
+		
 		Poem poeminfo=null;
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out=response.getWriter();
@@ -80,6 +85,7 @@ public class UeditorAction extends Action {
 	String pinfo=new String(request.getParameter("editorValue").getBytes("utf-8"),"UTF-8");
 	String ptitle="yes";
 	int key;
+	String username = null;
 	Date d=new Date();
 	String ps=Transform.DateToString(d);
 	Date ptime=Transform.StringToDate(ps);
@@ -88,6 +94,8 @@ public class UeditorAction extends Action {
 		try{
 			Type type=(Type)session.get(Type.class,18);
 		    /*poeminfo=(Poem)session.get(Poem.class,3);*/
+			//获取诗人的信息
+			
 			Poem poem=new Poem();
 			//Image image=new Image();
 			poem.setPtitle(ptitle);
@@ -115,7 +123,9 @@ public class UeditorAction extends Action {
 		finally{
 			HibernateUtil.closeSession();
 		}
+		
 		request.setAttribute("poeminfo", poeminfo);
+		
 		return mapping.findForward("ok");
 	}
 	

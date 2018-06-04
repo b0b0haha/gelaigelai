@@ -40,7 +40,7 @@
 			resource="com/gelaigelai/domain/ArticleComment.hbm.xml" />
 		<mapping
 			resource="com/gelaigelai/domain/CollectionArticle.hbm.xml" />
-
+		
 	</session-factory>
 
 </hibernate-configuration>

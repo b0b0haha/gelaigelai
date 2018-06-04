@@ -3,6 +3,8 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 这是个人主页部分
  -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -36,11 +38,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="header">
 		<div id="logo">
 			<img src="images/gelai.jpg" alt="" width='200px' height='200px'/>
-			<h1><a href="#">Privy</a></h1>
+			<h1><a href="#">徐怀静</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="myaccount.jsp" accesskey="1" title="">我的诗歌</a></li>
+				<li class="current_page_item"><a href="/new/personal.do?userId=${userId }&page=1" accesskey="1" title="">我的诗歌</a></li>
 				<li><a href="fans.jsp" accesskey="2" title="">我的粉丝</a></li>
 				<li><a href="follow.jsp" accesskey="3" title="">我关注的</a></li>
 				<li><a href="like.jsp" accesskey="4" title="">我收藏的</a></li>
@@ -52,27 +54,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="welcome">
 			<div class="title">
 			<ul class="style1">
-				<li>
-					<p class="date"><a href="#">Jan<b>03</b></a></p>
-					<h3>Sagittis diam dolor amet</h3>
-					<p><a href="#">Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie. Donec leo, vivamus fermentum nibh in augue praesent congue rutrum.</a></p>
+			   <c:forEach items="${poemlist}" var="poem">
+                           <li>
+					<p class="date"><a href="#">${poem.ptime}</a></p>
+					<h3>${poem.ptitle }</h3>
+					<p style="font-size: 13px;"><a href="/new/orgindisplay.do?poemId=${poem.idpoem}&userId=${userId }">${poem.pinfo}</a></p>
 				</li>
-				<li>
-					<p class="date"><a href="#">Jan<b>01</b></a></p>
-					<h3>Amet sed volutpat mauris</h3>
-					<p><a href="#">Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget, tempus et, tellus. Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Etiam non felis. Donec ut ante.</a></p>
-				</li>
-				<li>
-					<p class="date"><a href="#">Dec<b>31</b></a></p>
-					<h3>Sagittis diam dolor amet</h3>
-					<p><a href="#">Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie. Donec leo, vivamus fermentum nibh in augue praesent congue rutrum.</a></p>
-				</li>
+                                   </c:forEach>
+				
+				
 			</ul>
 		</div>
-		<div id="copyright">
-			<span>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a></span>
-			<span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</span>
-		</div>
+		<span class="disabled" style="float:center;"><<</span><span class="current">1</span>&ensp; <a href="/new/personal.do?userId=${userId }&page=2">2</a>&ensp; <a href="/new/personal.do?userId=${userId }&page=3">3</a>&ensp; …&ensp; <a href="#?page=199">10</a>&ensp; <a href="#?page=200">11</a>&ensp; <a href="#?page=2">>></a>
 	</div>
 </div>
 </body>

@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li><a href="news.html">诗讯/news</a></li> -->
             
             <c:if test="${loginFlag==1}">
-            <li><a href="myaccount.html">个人中心/my account</a></li>
+            <li><a href="/new/personal.do?userId=${userId }&page=1">个人中心/my account</a></li>
             <li><a href="#">注销/logout</a></li>
            </c:if>
           <c:if test="${loginFlag==null||loginFlag==0 }">
@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 							<ul class="actions">
-								<li><a href="poem.html" class="button">More</a></li>
+								<li><a href="/new/displaypoem.do?type=3&userId=${userId }" class="button">More</a></li>
 							</ul>
 						</article>
 						<article class="item">

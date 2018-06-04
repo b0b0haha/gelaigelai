@@ -229,6 +229,34 @@ public List getPoemByPoet(Poet poet){
 	    }
 	return results;
 }
+//按作者个人获取诗歌
+public ArrayList<Poem> getPoemByUserId (Integer userId){
+	 ArrayList<Poem> results=new ArrayList<Poem>();
+		// 创建Session实例
+	    Session session = HibernateUtil.getsSession();
+	    // 创建Transaction实例
+	    Transaction tx = session.beginTransaction();
+
+	    try {
+	       String hql="FROM Poem P ORDER BY P.ptime DESC";
+	        Query query=session.createQuery(hql);
+	        List<Poem> poemlist=query.list();
+	        for(Poem p:poemlist){
+	        	if(p.getUserIdUser().equals(userId)&&p.getType().getIdtype().equals(18))
+	        		results.add(p);
+	        }
+	        // 提交事务
+	        tx.commit();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        // 出现异常，回滚事务
+	        tx.rollback();
+	    } finally {
+	        // 关闭Session连接
+	        HibernateUtil.closeSession();
+	    }
+	return results;
+}
 
 //判断个人删除诗歌下的评论
 public boolean IsDeleteComment(Integer poemId,Integer userId){

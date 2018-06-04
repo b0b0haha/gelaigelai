@@ -195,8 +195,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="col-md-8 single-left">
 				<div class="comments">
 					<ul>
-						<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>25th March 2016</li>&nbsp;&nbsp;&nbsp;&nbsp;
-						<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="bai.html">Doris</a></li>
+						<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>${date}</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="bai.html">${username}</a></li>
 						<!-- <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="#">5 Comments</a></li>
 						<li><span class="glyphicon glyphicon-tags" aria-hidden="true"></span><a href="#">5 Tags</a></li> -->
 					</ul>

@@ -5,6 +5,7 @@
 package com.gelaigelai.struts.action;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -17,12 +18,15 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.gelaigelai.common.Transform;
 import com.gelaigelai.domain.Image;
 import com.gelaigelai.domain.NewImage;
 import com.gelaigelai.domain.Poem;
 import com.gelaigelai.domain.Poet;
+import com.gelaigelai.domain.User;
 import com.gelaigelai.service.PoemService;
 import com.gelaigelai.service.PoetService;
+import com.gelaigelai.service.UserService;
 
 /** 
  * MyEclipse Struts
@@ -134,7 +138,15 @@ public class MordenPoemAction extends Action {
 	    request.setAttribute("recommendPoems", recommendPoems);
 		request.setAttribute("poets", poets);
 	    request.setAttribute("userId", userId);
-		
+	    
+	    Date date=new Date();
+		String dateString=Transform.DateToString(date);
+		UserService userService=new UserService();
+		User u =userService.findByIdGet(userId);
+		String username=u.getUsername();
+		request.setAttribute("username", username);
+		request.setAttribute("date", dateString);
+	    
 		/*按类别显示诗歌*/
 	    switch(type){
 		case(1):{

@@ -5,6 +5,7 @@
 package com.gelaigelai.struts.action;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -17,12 +18,15 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.gelaigelai.common.Transform;
 import com.gelaigelai.domain.Image;
 import com.gelaigelai.domain.NewImage;
 import com.gelaigelai.domain.Poem;
 import com.gelaigelai.domain.Poet;
+import com.gelaigelai.domain.User;
 import com.gelaigelai.service.PoemService;
 import com.gelaigelai.service.PoetService;
+import com.gelaigelai.service.UserService;
 
 /** 
  * MyEclipse Struts
@@ -65,6 +69,7 @@ public class OrginPoemAction extends Action {
 		int flag=0;//判断是否登录
 		int type;
 		Integer userId;
+		userId=Integer.parseInt(request.getParameter("userId"));
 		List<Poem>recommendPoems=new ArrayList<Poem>();
 		List<Poem>hotPoems=new ArrayList<Poem>();
 		List<Poem>newPoems=new ArrayList<Poem>();
@@ -74,7 +79,7 @@ public class OrginPoemAction extends Action {
 		   List<Image>ranimages=new ArrayList<Image>();
 		   List<NewImage>newImages=new ArrayList<NewImage>();
 		   List<NewImage>rannewImages=new ArrayList<NewImage>();
-		userId=Integer.parseInt(request.getParameter("userId"));
+		
 		type=Integer.parseInt(request.getParameter("type"));
 		
 		PoemService poemService=new PoemService();
@@ -133,6 +138,14 @@ public class OrginPoemAction extends Action {
 	    request.setAttribute("recommendPoems", recommendPoems);
 		request.setAttribute("poets", poets);
 	    request.setAttribute("userId", userId);
+		
+	    Date date=new Date();
+		String dateString=Transform.DateToString(date);
+		UserService userService=new UserService();
+		User u =userService.findByIdGet(userId);
+		String username=u.getUsername();
+		request.setAttribute("username", username);
+		request.setAttribute("date", dateString);
 		
 		/*按类别显示诗歌*/
 	    switch(type){

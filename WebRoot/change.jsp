@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class="set-btn visible-xs-block js-header-avator"><a href="#" target="_self"><img width="40" height="40"></a></li>
 
             <li>
-                <a href="index.jsp"  target="_self">首页</a>
+                <a href="index.jsp?userId=${userId }"  target="_self">首页</a>
             </li>
             <li><a href="myaccount.jsp"  target="_self">个人中心<i class="icn-new"></i></a></li>
 

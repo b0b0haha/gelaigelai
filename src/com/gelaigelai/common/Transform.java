@@ -4,6 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javassist.bytecode.stackmap.BasicBlock.Catch;
+
+import static org.hamcrest.CoreMatchers.nullValue;
+
 import java.text.ParseException;
 
 public class Transform {
@@ -21,6 +24,71 @@ public static Date StringToDate(String date){
 		ex.printStackTrace();
 	}
 	return d;
+}
+public static  String[]transferMonth(Date now){
+
+	  
+	
+	  String[]str=new String[2];
+	  SimpleDateFormat format_y = new
+	SimpleDateFormat("yyyy");
+	  SimpleDateFormat format_M = new
+	SimpleDateFormat("MM");
+	  
+	  SimpleDateFormat format_D = new
+				SimpleDateFormat("DD");
+	
+	  String this_year =
+	format_y.format(now);
+	
+	  String this_month =
+	format_M.format(now);
+	  String this_day=format_D.format(now);
+	  String month=getMonth(this_month);
+	  if(month!=null)
+	str[0]=month;
+	  else return null;
+	str[1]=this_day;
+	return str;
+}
+public static String getMonth(String str){
+	if(str.equals("01")){
+		return "Jan";
+	}else if(str.equals("02")){
+		return "Feb";
+	}else if
+		(str.equals("01")){
+		return "Jan";
+	}else if
+		(str.equals("03")){
+		return "Mar";
+	}else if
+		(str.equals("04")){
+		return "Apr";
+	}else if
+		(str.equals("05")){
+		return "May";
+	}else if
+		(str.equals("06")){
+		return "June";
+	}else if
+		(str.equals("07")){
+		return "July";
+	}else if
+		(str.equals("08")){
+		return "Aug";
+	}else if
+		(str.equals("09")){
+		return "Sept";
+	}else if(str.equals("10")){
+		return "Oct";
+	}else if
+		(str.equals("11")){
+		return "Nov";
+	}else if(str.equals("12")){
+		return "Dec";
+	}
+	else return null;
 }
 public  static int getAge(String date) {
 	Date birthDate=StringToDate(date);
